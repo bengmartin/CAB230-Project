@@ -2,7 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="mystylesheet.css">
-    <script type="text/javascript" src="myscript.js"></script>
+    <script type="text/javascript" src="geolocation.js"></script>
     <title>Search Page</title>
 </head>
 <body>
@@ -34,5 +34,8 @@
             <input type="submit" value="Search"><br>
         </form>
     </div>
+	<br><button onclick="getLocation()">Get location!</button>
+	<p id="status">Click the button to get your coordinates.</p>
+	<div id="mapholder"></div>
 </body>
 </html>
