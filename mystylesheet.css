@@ -1,0 +1,51 @@
+a:link, a:visited, a:hover, a:active  {
+    background-color: #f3843E;
+    color: white;
+    padding: 14px 25px;
+    text-align: 40%;
+    text-decoration: none;
+    display: inline-block;
+}
+body {
+    background-color: #393939;
+    color: #f3843E; 
+    font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+    margin: 0px;
+    text-align: center;
+}
+ul {
+  display: flex;
+  justify-content: center;
+}
+li  {
+    text-align: center;
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 12px;
+}
+form  {
+    text-align: center;
+    justify-content: center;
+    
+}
+.input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+
+input[type=text]:focus {
+    width: 40%;
+}
+#myBox  {
+    background-color: lightgray;
+    margin-left: 120px;
+    margin-right: 120px;
+    box-shadow: 10px 10px 10px #f3843E;
+}
+.error-message {
+    color: red;
+    visibility: hidden;
+}
