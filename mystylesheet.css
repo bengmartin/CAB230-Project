@@ -1,4 +1,4 @@
-a:link, a:visited, a:hover, a:active  {
+#navlist a{
     background-color: #f3843E;
     color: white;
     padding: 14px 25px;
@@ -49,3 +49,34 @@ input[type=text]:focus {
     color: red;
     visibility: hidden;
 }
+
+#resultsTable{
+	/* text-align: center; */
+
+
+}
+
+#resultsTable table{
+	text-align: center;
+	margin: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#resultsTable table, th{
+	padding: 15px;
+}
+
+#resultsTable a{
+	color: #f3843E;
+	text-decoration: none;
+}
+
+#parkSpecs{
+	width: 800px;
+	margin: auto;
+	text-align: left;
+}
+
+
+
