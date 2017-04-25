@@ -1,17 +1,24 @@
+#headBox{
+    background-color: #f3843E;
+}
+
 #navlist a{
     background-color: #f3843E;
     color: white;
-    padding: 14px 25px;
+    padding: 10px 25px;
     text-align: 40%;
     text-decoration: none;
     display: inline-block;
 }
 body {
     background-color: #393939;
-    color: #f3843E; 
     font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
     margin: 0px;
     text-align: center;
+}
+
+h3, h2, p {
+    color: #f3843E;
 }
 ul {
   display: flex;
