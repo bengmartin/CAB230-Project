@@ -6,15 +6,7 @@
     <title>Result Two</title>
 </head>
 <body>
-  <div id="headBox">
-    <h1>Park Two</h1> 
-    <ul id="navlist">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="registration.html">Registration</a></li>
-      <li><a href="search.html">Search</a></li>
-      <li><a href="#about">Contact</a></li>
-    </ul>
-  </div>
+  <?php include 'menu.php'; ?>
 		<div id = "parkSpecs">
 		<p><b>Location:</b>&nbsp; 55 Jerry Ave North Side</p>
 		

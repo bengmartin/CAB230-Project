@@ -1,17 +1,28 @@
-#headBox{
+html{
+     background-image: url("background-image_blur.jpg");
+}
+
+#box1  {
     background-color: #f3843E;
+    width: 40%;
+    margin-left: 550px;
+    margin-right: 120px;
+}
+
+nav{
+    width: 40%;
+    margin-left: 550px;
+    margin-right: 120px;
+    
 }
 
 #navlist a{
-    background-color: #f3843E;
     color: white;
     padding: 10px 25px;
-    text-align: 40%;
     text-decoration: none;
     display: inline-block;
 }
 body {
-    background-color: #393939;
     font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
     margin: 0px;
     text-align: center;
