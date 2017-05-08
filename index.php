@@ -7,6 +7,8 @@
 </head>
 <body>
   <?php include 'menu.php'; ?>
+  <div id="myBox">
     <h2>Welcome</h2>
+  </div>
 </body>
 </html>
