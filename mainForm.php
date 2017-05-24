@@ -63,7 +63,7 @@
 					
 					
 					include 'loginForm.php';
-					if (isset($_SESSION['user'])) echo '<p>booger</p>';					
+					//if (isset($_SESSION['user'])) echo '<p>booger</p>';					
 				}
 				
 				//echo 'form submitted successfully with no errors'; 
@@ -78,7 +78,7 @@
 			if ($_GET['link'] == 1){
 
 				include 'loginForm.php';
-				if (isset($_SESSION['user'])) echo '<p>booger</p>';
+				//if (isset($_SESSION['user'])) echo '<p>booger</p>';
 			} else {
 				include 'formNew.php';
 			}
