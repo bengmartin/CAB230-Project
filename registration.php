@@ -8,7 +8,7 @@
 <body>
   <?php include 'menu.php'; ?>
     <div id="myBox">
-        <form name="myForm" class="search" onsubmit="validateForm()">
+        <form name="myForm" action = "newUser.php" method = "post" class="search" onsubmit="validateForm()">
             <br>Username:
             <input type="text" name="username" maxlength="15"><br>
             <br>Email Address:

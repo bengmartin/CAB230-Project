@@ -23,6 +23,11 @@ nav{
     text-decoration: none;
     display: inline-block;
 }
+
+#login {
+	float: right;
+}
+
 body {
     font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
     margin: 0px;

@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="mystylesheet.css">
@@ -6,7 +5,16 @@
     <title>Results Page</title>
 </head>
 <body>
-  <?php include 'menu.php'; ?>
+	<?php //include 'menu.php';
+		$searchInput = $_POST['search'];
+		include 'pdo.php';
+		//$result = $pdo->query("SELECT Name FROM cab230-2017-dataset-parks WHERE Name LIKE $searchInput");
+		$result = $pdo->query("SELECT Name FROM cab230-2017-dataset-parks WHERE Name LIKE $searchInput");
+		//echo '</p>{$_POST['search']}</p>';
+		foreach ($result as $Name) {
+			echo "<p>{$Name['Name']}</p></br>";
+		}
+	?>
 	<div id = "resultsTable">
 		<table>
 			<tr>
