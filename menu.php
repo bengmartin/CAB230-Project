@@ -1,5 +1,5 @@
 <h1>ParkFind</h1>  
-<nav> 
+<nav class="content"> 
     <ul id="navlist">
       <li><a href="index.php"><img width="100" height="100" src="bench_outline.png"><br />Home</a></li>
       <?php 
