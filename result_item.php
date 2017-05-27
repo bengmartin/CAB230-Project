@@ -26,6 +26,11 @@ if(isset($_POST['reviewDescription']) && isset($_POST['rating'])){
 			include 'resultItemInfo.php';
 		echo '</div>';
 		echo '<br>';
+		
+		echo '<div id = "myBox">';
+			include 'parkReviews.php';
+		echo '</div>';
+		
 		if (isset($_SESSION['user'])){
 			echo '<div id = "myBox">';
 				include 'reviewForm.php';
@@ -45,7 +50,11 @@ if(isset($_POST['reviewDescription']) && isset($_POST['rating'])){
 		echo '</div>';
 			
 		echo '<br>';
-
+		
+		echo '<div id = "myBox">';
+			include 'parkReviews.php';
+		echo '</div>';
+		
 		if (isset($_SESSION['user'])){
 			echo '<div id = "myBox">';
 				include 'reviewForm.php';
