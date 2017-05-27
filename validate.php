@@ -116,6 +116,29 @@
 		} */
 	}
 	
+	function validateDescription(&$errors, $field_list, $field_name){	
+		//$sameName = null;
+		//$iterator = 0;
+		//include "pdo.php";
+		//username_query($field_list, $field_name);
+		/* $result = $pdo->query("SELECT UserName FROM userlist WHERE UserName='$field_list[$field_name]'");
+	
+		foreach ($result as $userName) {
+			$iterator++;
+		} */
+		//$pattern = '/^[a-zA-Z ]*$/';
+		if (!isset($field_list[$field_name])|| empty($field_list[$field_name])) {
+			$errors[$field_name] = 'required';
+		}
+		/* else if (!preg_match($pattern, $field_list[$field_name])){
+			$errors[$field_name] = 'invalid';
+		} */
+		/* else if($iterator > 0){
+			$errors[$field_name] = 'User Name already exists';
+		} */
+		
+	}
+	
 	/* 'SELECT Breed, BreedName '.
 			'FROM breeds '.
 			'WHERE breeds.Breed > 0' */

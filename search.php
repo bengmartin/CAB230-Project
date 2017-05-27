@@ -10,8 +10,25 @@
     <div id="myBox">
         <h3>Please fill in search fields</h3>
         <form action="search.php" method="post">
-            Name:
-            <input type="text" name="search" placeholder="Search.."><br></br>
+			Name: <input type="text" name="nameSearch" placeholder="Search.."><br></br>
+			
+			<?php
+			//Suburb: <input type="text" name="suburbSearch" placeholder="Search.."><br></br>
+			error_reporting(E_ALL);
+			ini_set('display_errors', 1);
+			
+			include 'pdo.php';
+			$iterator = 0;
+			$result = $pdo->query('SELECT DISTINCT Suburb '.'FROM parks '.'WHERE id > 0 ORDER BY Suburb');
+			echo '<select name = "Suburbs">';
+			echo '<option value="',null,'">','Select Suburb..','</option>';
+				foreach ($result as $suburb){
+					$iterator++;
+					echo '<option value="',$suburb['Suburb'],'">',$suburb['Suburb'],'</option>';
+				}
+			echo '</select>';
+			?>
+			</br></br>
 			<input type="submit" value="Search"><br></br>
             
         </form>
@@ -20,32 +37,31 @@
 	<?php
 		error_reporting(E_ALL);
 		ini_set('display_errors', 1);
+		echo '</br>';
+		include 'pdo.php';
+		//$iterator = 0;
+		//$iterator2 = 0;
+		//$array = array();
+		
+		/* $result = $pdo->query('SELECT DISTINCT Suburb '.'FROM parks '.'WHERE id > 0 ORDER BY Suburb');
+		echo '<select name = "Suburbs">';
+			foreach ($result as $suburb){
+				$iterator++;
+				echo '<option value="',$suburb[$iterator],'">',$suburb['Suburb'],'</option>';
+			}
+		echo '</select>'; */
+		
 		/* <br><button onclick="getLocation()">Get location!</button>
 		<p id="status">Click the button to get your coordinates.</p>
 		<div id="mapholder"></div> */
+
 		
-		/* <br>Suburb:
-		<select name="suburb">
-			<option selected>None</option>
-			<option value="new farm">New Farm</option>
-			<option value="woolloongabba">Woolloongabba</option>
-			<option value="Fortitude Valley">Fortitude Valley</option>
-		</select><br><br>
-		<input type="radio" name="rating" value="0" checked>None
-		<input type="radio" name="rating" value="1">1
-		<input type="radio" name="rating" value="2">2
-		<input type="radio" name="rating" value="3">3
-		<input type="radio" name="rating" value="4">4
-		<input type="radio" name="rating" value="5">5<br><br>
-		<input type="submit" value="Search"><br> */
-		
-		if (isset($_POST['search'])){
+		if (isset($_POST['nameSearch'])){
 			echo '<div id ="myBox">';
 			include 'results.php';
 			//echo '</p>{$_POST['$search']}</p>';
 			echo '</div>';
 		}
-		
 	?>
 </body>
 </html>

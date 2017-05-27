@@ -16,9 +16,7 @@
 		
 		$errors = array();
 		
-		if ($_GET['link'] == 1){
-			
-		}
+		
 		if ((isset($_POST['email'])&& isset($_POST['name']) && isset($_POST['password1']))  || (isset($_POST['loginName']) && isset($_POST['loginPassword'])) ){
 			if ($_GET['link'] == 2){
 				validateEmail($errors, $_POST, 'email');
