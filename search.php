@@ -1,19 +1,28 @@
-<!DOCTYPE HTML>
 <html>
+<?php
+	
+	//echo "<div id = 'login'>";
+		//echo '<a href="search.php?link=' . $a . '">Search Reviews</a>';
+	//echo "</div>";
+?>
+
 <head>
     <link rel="stylesheet" type="text/css" href="mystylesheet.css">
     <script type="text/javascript" src="geolocation.js"></script>
     <title>Search Page</title>
 </head>
 <body>
-  <?php include 'menu.php'; ?>
-    <div id="myBox">
+  <?php  
+	
+	//include 'menu.php';
+  ?>
         <h3>Please fill in search fields</h3>
         <form action="search.php" method="post">
 			Name: <input type="text" name="nameSearch" placeholder="Search.."><br></br>
 			
 			<?php
 			//Suburb: <input type="text" name="suburbSearch" placeholder="Search.."><br></br>
+			
 			error_reporting(E_ALL);
 			ini_set('display_errors', 1);
 			
@@ -32,7 +41,6 @@
 			<input type="submit" value="Search"><br></br>
             
         </form>
-    </div>
 	
 	<?php
 		error_reporting(E_ALL);
