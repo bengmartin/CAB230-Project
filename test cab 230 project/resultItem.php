@@ -6,6 +6,7 @@ $values = array($_GET['link']);
 $result = runQuery ($query, $values);
 foreach ($result as $parkInfo){
 	$parkName = $parkInfo['Name'];
+	$_SESSION['parkName'] = $parkName;
 	$parkStreet = $parkInfo['Street'];
 	$parkSuburb = $parkInfo['Suburb'];
 }
@@ -21,4 +22,6 @@ echo '<table>';
 		echo "<td>$parkSuburb</td>";
 	echo '</tr>';
 echo '</table>';
+
+//if (isset($_SESSION['user'])) includeInDiv('reviewForm.php','myBox');
 ?>

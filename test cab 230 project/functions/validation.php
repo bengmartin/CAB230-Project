@@ -97,8 +97,22 @@ function validateLoginPassword(&$errors, $field_list, $field_name, $enteredUserN
 }
 
 function validateDescription(&$errors, $field_list, $field_name){
+	$user = $_SESSION['user'];
+	$parkName = $_SESSION['parkName'];
+	$query = 'select * from reviews where user = ? AND parkName = ?';
+	$values = array($user, $parkName);
+	$result = runQuery($query, $values);
+	$iterator = 0;
+	
+	foreach ($result as $User) {
+		$iterator++;
+	}
+	
 	if (!isset($field_list[$field_name])|| empty($field_list[$field_name])) {
 		$errors[$field_name] = 'required';
+	}
+	else if ($iterator >= 1) {
+		$errors[$field_name] = 'User has aleady left a review for this park';
 	}
 }
 ?>

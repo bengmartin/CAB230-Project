@@ -9,8 +9,9 @@ ini_set('display_errors', 1);
 function validationWindow($determination){
 	echo '<script language="javascript">';
 	if ($determination == 'fail') echo 'alert("Invalid, correct the following errors")';
-	if ($determination == 'RegSuccess') echo 'alert("Registration Successful")';
-	if ($determination == 'loginSuccess') echo 'alert("User logged in Successfully")';
+	else if ($determination == 'RegSuccess') echo 'alert("Registration Successful")';
+	else if ($determination == 'loginSuccess') echo 'alert("User logged in Successfully")';
+	else if ($determination == 'ReviewSuccess') echo 'alert("Review added to park")';
 	echo '</script>';
 }
 
@@ -23,6 +24,15 @@ function input_field($errors, $name, $label, $type) {
 	errorLabel($errors, $name);
 	echo '</div>';
 }
+
+function text_area_input_field($errors, $name, $label, $numRows) {
+		echo '<div class="required_field">';
+		label($name, $label);
+		$value = posted_value($name);
+		echo "<textarea rows=\"$numRows\" id=\"$name\" name=\"$name\" value=\"$value\"></textarea>"; 
+		errorLabel($errors, $name);
+		echo '</div>';
+	}
 
 function search_input_field($name, $label, $type) {
 	echo '<div class="required_field">';

@@ -31,8 +31,12 @@ if ($webPage == 3){
 	}
 } 
 if ($webPage == 4) includeInDiv('logout.php', 'myBox');
-if ($webPage == 5) includeInDiv('resultItem.php', 'myBox');
-if ($webPage == 5 && isset($_SESSION['user'])) includeInDiv('reviewForm.php','myBox');
+if ($webPage == 5){
+	includeInDiv('resultItem.php', 'myBox');
+	includeInDiv('reviewList.php', 'myBox');
+} 
+//if ($webpage == 5) includeInDiv('reviewList.php', 'myBox');
+if ($webPage == 5 && isset($_SESSION['user'])) includeInDiv('review.php','myBox');
 
 ?>
 </body>
